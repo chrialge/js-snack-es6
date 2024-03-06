@@ -11,13 +11,11 @@ const bikes = [
     { nome: 'Bicicletta elettrica', peso: 20 },
     { nome: 'Bicicletta urbana', peso: 12 }
 ];
-let {peso} = bikes
-console.log(peso)
 
 let startIndex = 0
 for (const key in bikes) {
     console.log(bikes[key])
-    const peso = bikes[key].peso
+    const {peso} = bikes[key]
     console.log(peso)
     if(bikes[startIndex].peso > peso){
         startIndex = key
