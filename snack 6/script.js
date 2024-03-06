@@ -24,5 +24,12 @@ const numberRandom = getRndInteger(0,50)
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min) ) + min;
 }
-console.log(numberRandom);
 
+
+squadTeam.forEach(squad =>{
+    const {puntiFatti, falliSubiti} = squad
+    puntiFatti = getRndInteger(0,50)
+    squad.puntiFatti = getRndInteger(0,50)
+    squad.falliSubiti = getRndInteger(0,50)
+});
+console.log(squadTeam)
