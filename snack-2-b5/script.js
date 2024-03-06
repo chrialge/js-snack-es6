@@ -14,15 +14,24 @@ const cumbers =[
     {nome: 'Zucchine tonde', peso:  0.3, lunghezza: 10},
     {nome: 'Zucchine chiare', peso:  0.2, lunghezza:15 },
     {nome: 'Zucchine verdi', peso:  0.2, lunghezza: 20}
-]
-const zucchinabigger = cumbers.filter(zucchina =>{
+];
+
+
+const zucchinaBigger = cumbers.filter(zucchina =>{
     if (zucchina.lunghezza > 15){
         return true
-    }
-})
+    };
+});
 const zucchinaSmaller = cumbers.filter(zucchina =>{
     if(zucchina.lunghezza <=15){
         return true;
-    }
-})
-console.log(zucchinaSmaller, zucchinabigger)
+    };
+});
+
+let pesoZucchinaSmaller = 0
+zucchinaSmaller.forEach(zucchina => pesoZucchinaSmaller += zucchina.peso)
+
+let pesoZucchinaBigger = 0
+zucchinaBigger.forEach(zucchina => pesoZucchinaBigger += zucchina.peso)
+console.log(zucchinaSmaller, pesoZucchinaSmaller );
+console.log( zucchinaBigger, pesoZucchinaBigger)
