@@ -40,23 +40,23 @@ const persons =[
         cognome: 'Foscolo',
         eta: 70
     }
-]
+];
 
 const persona = persons.map((persona) => {
     const nome = persona.nome;
     const cognome = persona.cognome;
     const eta = Number(persona.eta);
-    let driveWords
+    let driveWords;
     if(eta < 18){
-        driveWords = "io non posso guidare perche sono minorenne"
+        driveWords = "io non posso guidare perche sono minorenne";
     }else if(eta > 65){
-        driveWords = 'io non posso guidare perche sono vecchio'
+        driveWords = 'io non posso guidare perche sono vecchio';
     }else{
-        driveWords = 'io posso guidare'
+        driveWords = 'io posso guidare';
     }
-    const markup = `Ciao io sono ${nome} ${cognome}, la mia eta e ${eta} quindi ${driveWords}`
-    return markup
+    const markup = `Ciao io sono ${nome} ${cognome}, la mia eta e ${eta} quindi ${driveWords}`;
+    return markup;
 
 
-})
-console.log(persona)
+});
+console.log(persona);
