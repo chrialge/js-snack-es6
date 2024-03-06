@@ -4,6 +4,10 @@ Creare un array di oggetti:
 Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso.
 Stampare in console la bici con peso minore utilizzando destructuring e template literal
 */
+
+const ulElement = document.createElement("ul")
+const liElement = document.createElement("li")
+ulElement.appendChild(liElement)
 const bikes = [
     { nome: 'mountbike', peso: 10 },
     { nome: 'Bicicletta da corsa', peso: 15 },
@@ -24,4 +28,4 @@ for (const key in bikes) {
 }
 console.log(startIndex)
 const bikeLessWeight = bikes[startIndex]
-console.log(bikeLessWeight)
+liElement.innerHTML = bikeLessWeight

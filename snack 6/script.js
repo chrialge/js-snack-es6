@@ -34,5 +34,7 @@ console.log(squadTeam)
 
 const newArray = squadTeam.map(squad => {
     const{nome, puntiFatti} = squad
-    console.log(nome, puntiFatti)
+    const team = {nome, puntiFatti}
+    return team
 })
+console.log(newArray)
