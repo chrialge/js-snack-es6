@@ -1,7 +1,7 @@
-console.log('ciao');
+// Crea 10 oggetti che rappresentano una zucchina.
+// Dividi in due array separati le zucchine che misurano meno o più di 15cm.
+// Infine stampa separatamente quanto pesano i due gruppi di zucchine.
 
-//Crea un array di 10 oggetti che rappresentano una zucchina, indicando per ognuna varietà, peso e lunghezza.
-//Calcola quanto pesano tutte le zucchine
 
 const cumbers =[
     {nome: 'Zucchine crookneck', peso:  0.3, lunghezza: 20 },
@@ -14,11 +14,15 @@ const cumbers =[
     {nome: 'Zucchine tonde', peso:  0.3, lunghezza: 10},
     {nome: 'Zucchine chiare', peso:  0.2, lunghezza:15 },
     {nome: 'Zucchine verdi', peso:  0.2, lunghezza: 20}
-];
-let sum = 0
-
-cumbers.forEach( zucchina =>{
-    sum += zucchina.peso
+]
+const zucchinabigger = cumbers.filter(zucchina =>{
+    if (zucchina.lunghezza > 15){
+        return true
+    }
 })
-
-console.log(sum)
+const zucchinaSmaller = cumbers.filter(zucchina =>{
+    if(zucchina.lunghezza <=15){
+        return true;
+    }
+})
+console.log(zucchinaSmaller, zucchinabigger)
