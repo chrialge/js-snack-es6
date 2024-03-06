@@ -27,9 +27,8 @@ function getRndInteger(min, max) {
 
 
 squadTeam.forEach(squad =>{
-    const {puntiFatti, falliSubiti} = squad
-    puntiFatti = getRndInteger(0,50)
-    squad.puntiFatti = getRndInteger(0,50)
-    squad.falliSubiti = getRndInteger(0,50)
+    let {puntiFatti, falliSubiti} = squad
+    puntiFatti = numberRandom
+    falliSubiti = getRndInteger(0,50)
 });
 console.log(squadTeam)
